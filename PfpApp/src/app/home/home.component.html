@@ -1,0 +1,91 @@
+<section>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    Find out how your investment will grow over time with compound interest. <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>$&nbsp;</span> <input type="text" name="II" placeholder="Initial Investment"
+                        [(ngModel)]="compoundCalcParams.initialInvestment"><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>$&nbsp;</span> <input type="text" name="RA" placeholder="Regular Addition by Monthly"
+                        [(ngModel)]="compoundCalcParams.regularAddition"><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>&nbsp;&nbsp;&nbsp;</span><input type="text" name="YTG" placeholder="Years to grow"
+                        [(ngModel)]="compoundCalcParams.yearsToGrow"><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>&nbsp;&nbsp;&nbsp;</span><input type="text" name="IR" placeholder="Interest Rate"
+                        [(ngModel)]="compoundCalcParams.interestRate"><span>%</span> <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   
+                    <div style="padding-left: 12px; width:70%">
+                        <select name="compoundFreqencyBy" id="compoundFreqencyBy" (change)="onSelect($event)">
+                            <option value = "">Select frequency to calculate compounding interest </option>
+                            <option value="12">Monthly</option>
+                            <option value="4">Quaterly</option>
+                            <option value="2">Semi-annually</option>
+                            <option value="1">Annually</option>
+                        </select>
+                        <!-- <ng-multiselect-dropdown name="CF" class="custom-font-size" [placeholder]="'Compound Frequency'"
+                            [settings]="dropdownSettings" [data]="dropdownList" [(ngModel)]="selectedItems"
+                            (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                        </ng-multiselect-dropdown> -->
+                    </div>
+                    <!-- <span>&nbsp;&nbsp;&nbsp;</span><input type="text" name="CF" placeholder="Compound Frequency"
+                        [(ngModel)]="compoundCalcParams.compoundFrequency"><br /> -->
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <span>&nbsp;&nbsp;&nbsp;</span><button class="primary" name="first" type="button"
+                        (click)="CalCulateCompoundInterest()">Calculate Compounding Interest</button><br />
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
+<section>
+    <table>
+        <tr>
+            <td style="padding-bottom:20px;">
+                <br /> Results
+            </td>
+        </tr>
+        <tr>
+            <table style="background-color: aquamarine;border: solid 1px var(--primary-color)">
+                <tr>
+                    <td>
+                        Total value of your investment:
+                    </td>
+                    <td>
+                        Total interest earned:
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        $ {{ this.totalValueOfInvestment }}
+                    </td>
+                    <td>
+                        $ {{ this.totalInterestEarned }}
+                    </td>
+                </tr>
+            </table>
+
+        </tr>
+    </table>
+</section>
