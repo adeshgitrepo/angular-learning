@@ -40,3 +40,10 @@ button {
       grid-template-columns: 1fr;
   }    
 }
+
+.housingLocationPhoto {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 30px 30px;
+}
