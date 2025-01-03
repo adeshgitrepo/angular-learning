@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+.bodySection{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+}
+.headerSection{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+}
+
+.contentSection{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid e9ecef;
+}
+
+.footerSection{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+}
+
+.sideMenuSection{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 5px solid e9ecef;
+}
+
+.mainContentSection{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 5px solid e9ecef;
+}
+
+#centerSection{
+    --bs-gutter-x: .0rem;
+}
